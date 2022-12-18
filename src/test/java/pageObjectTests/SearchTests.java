@@ -18,7 +18,6 @@ public class SearchTests extends BaseTest {
         searchResultsPage.verifySearchResults("Table");
 
         productPage.addToCart();
-
         productPage.viewCart();
 
         cartPage.emptyCart();

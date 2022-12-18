@@ -20,7 +20,7 @@ public class MainPage extends BasePage {
         driver.get(url);
     }
 
-    public void productSearch(String product){
+    public void productSearch(String product) {
         getSearchField().sendKeys(product);
         getSearchButton().click();
     }

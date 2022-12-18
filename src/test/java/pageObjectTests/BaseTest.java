@@ -15,11 +15,10 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         url = "https://www.webstaurantstore.com";
-
     }
+
     @AfterMethod
     public void tearDown(){
         driver.close();
     }
-
 }
