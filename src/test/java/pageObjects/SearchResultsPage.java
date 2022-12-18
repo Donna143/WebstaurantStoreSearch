@@ -14,7 +14,7 @@ public class SearchResultsPage extends BasePage {
 
     private WebElement getNextPageButton() { return driver.findElement(By.xpath("//div[@id='paging']//li[@class='inline-block leading-4 align-top rounded-r-md']")); }
 
-    private WebElement getLastPageButton() { return driver.findElement(By.xpath("//*[contains(@aria-label, 'last page')]")); }
+//    private WebElement getLastPageButton() { return driver.findElement(By.xpath("//*[contains(@aria-label, 'last page')]")); }
     public void verifySearchResults(String searchQuery) {
         List<WebElement> dynamicElement;
         WebElement lastProduct = null;
@@ -23,8 +23,8 @@ public class SearchResultsPage extends BasePage {
             int numProducts = description.size();
             for (WebElement desc : description) {
                 String descText = desc.getText();
-                System.out.println(descText);
-//                assertTrue(descText.contains(searchQuery));
+//                System.out.println(descText);
+//                assertTrue(descText.contains(searchQuery), "Product description does not contain: "+searchQuery+". Product: "+descText);
             }
             dynamicElement = driver.findElements(By.xpath("//*[contains(@aria-label, 'last page')]"));
             if (dynamicElement.size() != 0) { getNextPageButton().click(); }

@@ -3,13 +3,10 @@ package pageObjectTests;
 import org.testng.annotations.Test;
 import pageObjects.*;
 
-import static java.lang.Thread.sleep;
-
-
 public class SearchTests extends BaseTest {
 
     @Test
-    public void search_validProductSearch() throws InterruptedException {
+    public void search_validProductSearch() {
         MainPage mainPage = new MainPage(driver);
         SearchResultsPage searchResultsPage = new SearchResultsPage(driver);
         ProductPage productPage = new ProductPage(driver);
@@ -25,7 +22,5 @@ public class SearchTests extends BaseTest {
         productPage.viewCart();
 
         cartPage.emptyCart();
-//        sleep(2000);
-
     }
 }

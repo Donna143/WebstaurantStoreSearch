@@ -12,7 +12,6 @@ public class BaseTest {
 
     @BeforeMethod
     public void startUp(){
-//        System.setProperty("web.chrome.driver","chromedriver.exe");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         url = "https://www.webstaurantstore.com";
